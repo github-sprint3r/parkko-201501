@@ -1,10 +1,8 @@
 @CHARSET "UTF-8";
 
 #border {
-	/*width: 7.7cm;
-	height: 15.4cm;*/
-	width: 18.257185221968em;
-	height: 36.514370443936em;
+	width: 7.2cm;
+	height: 14.4cm;
 	border: 1px solid #ccc;
 	margin-right: auto;
 	margin-left: auto;

@@ -5,6 +5,7 @@ test/
 
 vendor/
 composer.lock
+.DS_Store
 
 .settings/
 .buildpath
