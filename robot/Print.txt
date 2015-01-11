@@ -2,16 +2,30 @@
 Library    Selenium2Library
 
 *** Variables ***
+${URL_CONNECT1}    http://27.254.142.62/print.php
+${URL_CONNECT2}    http://27.254.142.62/print.php?id=1
 
 *** Testcases ***
-Billing PARK-KO สฬ 5420
-	Open Browser    http://27.254.142.62/print.php
-	Page Should Contain    สฬ 5420
+Billing PARK-KO สฬ  ๕๔๒๐
+	Open Browser    ${URL_CONNECT2}
+	Page Should Contain    สฬ ๕๔๒๐
 	Page Should Contain    กรุงเทพมหานคร
-	Page Should Contain    วันเสาร์ที่ ๑๐ มกราคม พ.ศ. ๒๕๕๘ เวลา ๘:๓๐ น.
-	Page Should Contain    วันเสาร์ที่ ๑๐ มกราคม พ.ศ. ๒๕๕๘ เวลา ๑๘:๓๐ น.
-	Page Should Contain    ๙ ชั่วโมง
-	Page Should Contain    ขอบคุณที่ใช้บริการ
+	Page Should Contain    วันเสาร์ที่ ๑๐ มกราคม พ.ศ. ๒๕๕๘ เวลา ๐๘:๓๐ น.
+	Page Should Contain    วันอาทิตย์ที่ ๑๑ มกราคม พ.ศ. ๒๕๕๘ เวลา ๑๖:๓๒ น.
+	Page Should Contain    ๓๓ ชั่วโมง
+	Page Should Contain    ขอบคุณที่ใช้บริการค่ะ
 	Click Button    พิมพ์ใบเสร็จ
+	Close All Browsers
+
+Billing PARK-KO ณข ๑๕๙๗
+	Open Browser    ${URL_CONNECT1}
+	Page Should Contain    ณข ๑๕๙๗
+	Page Should Contain    กรุงเทพมหานคร
+	Page Should Contain    วันเสาร์ที่ ๑๐ มกราคม พ.ศ. ๒๕๕๘ เวลา ๐๘:๐๐ น.
+	Page Should Contain    วันอาทิตย์ที่ ๑๑ มกราคม พ.ศ. ๒๕๕๘ เวลา ๑๗:๐๐ น.
+	Page Should Contain    ๙ ชั่วโมง
+	Page Should Contain    ขอบคุณที่ใช้บริการค่ะ
+	Click Button    พิมพ์ใบเสร็จ
+	Close All Browsers
 
 *** Keywork ***
