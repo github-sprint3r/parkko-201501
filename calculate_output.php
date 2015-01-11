@@ -25,15 +25,27 @@ while ($row = mysql_fetch_assoc($result)) {
 
 ?>
 
+<!DOCTYPE html>
 <html>
 <head><title>Parkko | Cashier</title>
-<meta charset="UTF-8"></head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<link
+    href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    rel="stylesheet">
+<link rel="stylesheet"
+    href="/assets/font/boon/css/customized-bootstrap.css">
+<link rel="stylesheet" href="/assets/font/boon/css/boon.css">
+<link rel="stylesheet" href="/assets/css/parkko.css">
+<!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-12 pull-right">
                 <form action="#">
-                    <table>
+                    <table id="plate_detail">
                         <tbody>
                             <tr>
                                 <td>ชื่อ: </td>
@@ -69,10 +81,20 @@ while ($row = mysql_fetch_assoc($result)) {
                             </tr>
                         </tbody>
                     </table>
-                    <input type="button" value="คำนวนเงินทอน"><br>
+                    <input type="button" id="calculate_button" value="คำนวนเงินทอน"><br>
                 </form>
             </div>
         </div>
     </div>
 </body>
+<script type='text/javascript'
+    src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type='text/javascript'
+    src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/font/boon/js/fittext.js"></script>
+<script type="text/javascript">
+    $(document).on('click', '#calculate_button', function(){
+        alert('test');
+ });
+</script>
 </html>

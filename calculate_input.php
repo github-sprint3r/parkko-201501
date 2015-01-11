@@ -5,9 +5,6 @@
 </head>
 <body>
 <div class="row">
-<?php
-
-?>
     <div class="col-md-12 pull-right">
         <h4>กรอกทะเบียนที่ต้องการชำระเงิน</h4>
         <form action="/calculate_output.php" method="POST">
