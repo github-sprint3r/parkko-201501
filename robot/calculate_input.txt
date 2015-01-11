@@ -25,6 +25,9 @@ Calculate Input
     Page Should Contain    วันเสาร์ ที่ ๑๑ มกราคม พ.ศ.๒๕๕๘ เวลา ๐๘:๐๐ น.
     Page Should Contain    วันเวลาที่ออก:
     Page Should Contain    วันอาทิตย์ ที่ ๑๒ มกราคม พ.ศ.๒๕๕๘ เวลา ๑๗:๐๐ น.
+    Input Text    receive    2000
+    Click Button    calculate_button
+    Wait Until Page Contains    ยอดเงินที่ต้องทอน
     Close All Browser
 
 *** Keyword ***

@@ -11,7 +11,7 @@ $conn = mysql_connect($hostname, $username, $password)
   or die("Unable to connect to MySQL");
 // echo "Connected to MySQL<br>";
 
-  $db_selected = mysql_select_db('parkko', $conn);
+  $db_selected = mysql_select_db('PARKKO-201501', $conn);
 if (!$db_selected) {
     die ('Can\'t use foo : ' . mysql_error());
 }
