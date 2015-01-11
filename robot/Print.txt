@@ -1,0 +1,17 @@
+*** Settings  ***
+Library    Selenium2Library
+
+*** Variables ***
+
+*** Testcases ***
+Billing PARK-KO สฬ 5420
+	Open Browser    http://27.254.142.62/print.php
+	Page Should Contain    สฬ 5420
+	Page Should Contain    กรุงเทพมหานคร
+	Page Should Contain    วันเสาร์ที่ ๑๐ มกราคม พ.ศ. ๒๕๕๘ เวลา ๘:๓๐ น.
+	Page Should Contain    วันเสาร์ที่ ๑๐ มกราคม พ.ศ. ๒๕๕๘ เวลา ๑๘:๓๐ น.
+	Page Should Contain    ๙ ชั่วโมง
+	Page Should Contain    ขอบคุณที่ใช้บริการ
+	Click Button    พิมพ์ใบเสร็จ
+
+*** Keywork ***
