@@ -26,6 +26,6 @@ Billing PARK-KO ณข ๑๕๙๗
 	Page Should Contain    ๙ ชั่วโมง
 	Page Should Contain    ขอบคุณที่ใช้บริการค่ะ
 #	Click Button    พิมพ์ใบเสร็จ
-	Close All Browsers
+	Close Browser
 
 *** Keywork ***
