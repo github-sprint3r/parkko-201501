@@ -1,8 +1,11 @@
 test/
-*.txt
 *.html
 *.xml
 *.png
 
 vendor/
 composer.lock
+
+.settings/
+.buildpath
+.project
