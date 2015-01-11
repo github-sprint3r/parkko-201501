@@ -1,14 +1,5 @@
 <?
 require "library/ConnectMysql.php";
-require "library/CalculateMoney.php";
-require "library/SplitMoney.php";
-
-
-$dd = new CalculateMoney();
-$ff = $dd->calculate(250, 1000);
-
-$ee = new SplitMoney();
-$gg = $ee->split($ff);
 
 $license = $_POST["license_field"];
 
@@ -65,7 +56,7 @@ while ($row = mysql_fetch_assoc($result)) {
                             </tr>
                             <tr>
                                 <td>จำนวนเงินที่ชำระ: </td>
-                                <td><input type="text" value="1000">บาท<br></td>
+                                <td><input type="text" name="receive" value="1000">บาท<br></td>
                             </tr>
                         </tbody>
                     </table>
