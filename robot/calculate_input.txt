@@ -2,17 +2,17 @@
 Library    Selenium2Library
 
 *** Variables ***
-${cashier_page}    http://27.254.142.62/templates/calculate_input.html
+${cashier_page}    http://27.254.142.62/calculate_input.php
 
 *** Testcases ***
 Calculate Input
     Open Cashier Page
-    Title Should Be    Parkko | Cashier
+    Title Should Be    Parkko | กรอกเลขทะเบียน
     Page Should Contain    กรอกทะเบียนที่ต้องการชำระเงิน
     Page Should Contain    เลขทะเบียน:
     Input Text    license_field    สฬ5420
     Click Button    search_button
-    Close All Browsers
+    Title Should Be    Parkko | ข้อมูลเลขทะเบียน
 
 *** Keyword ***
 Open Cashier Page
