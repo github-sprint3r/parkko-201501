@@ -20,7 +20,7 @@ if(isset($_GET['id'])) {
 			'out' =>'2015-01-10 17:00',
 			'cost' =>50,
 			'money_in' =>500,
-			'money_out' =>950,
+			'money_out' =>450,
 	);
 }
 ?>
