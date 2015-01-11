@@ -1,0 +1,20 @@
+*** Settings ***
+Library    Selenium2Library
+
+*** Variables ***
+${cashier_page}    file:///Users/Ponear/Git/parkko/templates/calculate_input.html
+
+*** Testcases ***
+Calculate Input
+    Open Cashier Page
+    Title Should Be    Parkko | Cashier
+    Page Should Contain    กรอกทะเบียนที่ต้องการชำระเงิน
+    Page Should Contain    เลขทะเบียน:
+    Input Text    license_field    สฬ5420
+    Click Button    search_button
+    Close All Browsers
+
+*** Keyword ***
+Open Cashier Page
+    Open Browser    ${cashier_page}
+
