@@ -56,19 +56,19 @@ while ($row = mysql_fetch_assoc($result)) {
                             </tr>
                             <tr>
                                 <td>วันเวลาที่เข้า: </td>
-                                <td>วันเสาร์ ที่ ๑๑ มกราคม พ.ศ.๒๕๕๘</td>
+                                <td>วันเสาร์ ที่ ๑๑ มกราคม พ.ศ.๒๕๕๘ เวลา ๐๘:๐๐ น.</td>
                             </tr>
                             <tr>
                                 <td>วันเวลาที่ออก: </td>
-                                <td>วันอาทิตย์ ที่ ๑๒ มกราคม พ.ศ.๒๕๕๘</td>
+                                <td>วันอาทิตย์ ที่ ๑๒ มกราคม พ.ศ.๒๕๕๘ เวลา ๑๗:๐๐ น.</td>
                             </tr>
                             <tr>
                                 <td>ราคาที่ต้องชำระ: </td>
-                                <td>50 บาท</td>
+                                <td>๑๕๕๐ บาท</td>
                             </tr>
                             <tr>
                                 <td>จำนวนเงินที่ชำระ: </td>
-                                <td><input type="text" name="receive" value="1000">บาท<br></td>
+                                <td><input type="text" name="receive" value="">บาท<br></td>
                             </tr>
                         </tbody>
                     </table>
