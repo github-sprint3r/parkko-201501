@@ -1,8 +1,10 @@
 @CHARSET "UTF-8";
 
 #border {
-	width: 7.7cm;
-	height: 15.4cm;
+	/*width: 7.7cm;
+	height: 15.4cm;*/
+	width: 18.257185221968em;
+	height: 36.514370443936em;
 	border: 1px solid #ccc;
 	margin-right: auto;
 	margin-left: auto;
@@ -29,7 +31,7 @@
 }
 
 #border .border-row strong {
-	font-size: 18px;	
+	font-size: 14px;	
 }
 	
 #border .border-row .value {
