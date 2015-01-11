@@ -1,4 +1,12 @@
-results/
+test/
+*.html
+*.xml
+*.png
+
 vendor/
 composer.lock
 .DS_Store
+
+.settings/
+.buildpath
+.project

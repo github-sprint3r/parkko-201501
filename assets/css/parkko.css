@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+
+#border {
+	/*width: 7.7cm;
+	height: 15.4cm;*/
+	width: 18.257185221968em;
+	height: 36.514370443936em;
+	border: 1px solid #ccc;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 3px;
+}
+
+#border .header,#border .footer {
+	text-align: center;
+}
+
+#border .border {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+#border .header strong, #border .footer strong {
+	font-size: 24px;
+}
+
+#border .border-row {
+	margin-bottom: 10px;
+	display: block;
+}
+
+#border .border-row strong {
+	font-size: 14px;	
+}
+	
+#border .border-row .value {
+	font-size: 14px;
+}
+
+#printButton {
+	text-align: center;
+}
