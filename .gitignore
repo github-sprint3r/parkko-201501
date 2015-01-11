@@ -2,3 +2,8 @@ test/
 *.html
 *.xml
 *.png
+
+robot/
+*.html
+*.xml
+*.png
