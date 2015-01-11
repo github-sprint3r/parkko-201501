@@ -18,7 +18,7 @@ while ($row = mysql_fetch_assoc($result)) {
 
 <!DOCTYPE html>
 <html>
-<head><title>Parkko | Cashier</title>
+<head><title>Parkko | ข้อมูลเลขทะเบียน</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <link

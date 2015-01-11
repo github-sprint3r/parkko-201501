@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Parkko | Cashier</title>
+    <title>Parkko | กรอกเลขทะเบียน</title>
     <meta charset="UTF-8"></head>
 </head>
 <body>
