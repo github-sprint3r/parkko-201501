@@ -57,7 +57,7 @@ if(isset($_GET['id'])) {
 		<span class="border-row"><strong>จังหวัด: </strong><span class="value"><?php echo $data['province']?></span></span>
 		<span class="border-row"><strong>เวลาเข้า: </strong><br/><span class="value"><?php echo $parkko->thai_date(strtotime($data['in']))?></span></span>
 		<span class="border-row"><strong>เวลาออก: </strong><br/><span class="value"><?php echo $parkko->thai_date(strtotime($data['out']))?></span></span>
-		<span class="border-row"><strong>ระยะเวลา: </strong><span class="value"><?php echo $parkko->timeDuration($data['in'], $data['out'])?></span></span>
+		<span class="border-row"><strong>ระยะเวลา: </strong><span class="value"><?php echo $parkko->convertToThaiNumber($parkko->timeDuration($data['in'], $data['out']))?></span></span>
 		<span class="border-row"><strong>ค่าบริการ: </strong><span class="value"><?php echo $parkko->convertToThaiNumber(number_format($data['cost'], 2))?> บาท</span></span>
 		<span class="border-row"><strong>รับเงิน: </strong><span class="value"><?php echo $parkko->convertToThaiNumber(number_format($data['money_in'], 2))?> บาท</span></span>
 		<span class="border-row"><strong>ทอนเงิน: </strong><span class="value"><?php echo $parkko->convertToThaiNumber(number_format($data['money_out'], 2))?> บาท</span></span>
@@ -66,9 +66,9 @@ if(isset($_GET['id'])) {
 		<strong>ขอบคุณที่ใช้บริการค่ะ</strong>
 	</div>
 </div>
-
+<br/>
 <div id="printButton">
-	<input type="button" value = "Print this page" onclick="printPage()">
+	<input type="button" value = "Print this page" onclick="printPage()" class="btn btn-primary">
 </div>
 	
 <script type='text/javascript'
