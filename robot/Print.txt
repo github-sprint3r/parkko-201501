@@ -14,18 +14,18 @@ Billing PARK-KO สฬ ๕๔๒๐
 	Page Should Contain    วันอาทิตย์ที่ ๑๑ มกราคม พ.ศ.๒๕๕๘ เวลา ๑๖:๓๒ น.
 	Page Should Contain    ๓๓ ชั่วโมง
 	Page Should Contain    ขอบคุณที่ใช้บริการค่ะ
-	Click Button    พิมพ์ใบเสร็จ
-	Close All Browsers
+#	Click Button    พิมพ์ใบเสร็จ
+	Close Browser
 
 Billing PARK-KO ณข ๑๕๙๗
 	Open Browser    ${URL_CONNECT1}
 	Page Should Contain    ณข ๑๕๙๗
 	Page Should Contain    กรุงเทพมหานคร
 	Page Should Contain    วันเสาร์ที่ ๑๐ มกราคม พ.ศ.๒๕๕๘ เวลา ๐๘:๐๐ น.
-	Page Should Contain    วันอาทิตย์ที่ ๑๑ มกราคม พ.ศ.๒๕๕๘ เวลา ๑๗:๐๐ น.
+	Page Should Contain    วันเสาร์ที่ ๑๐ มกราคม พ.ศ.๒๕๕๘ เวลา ๑๗:๐๐ น.
 	Page Should Contain    ๙ ชั่วโมง
 	Page Should Contain    ขอบคุณที่ใช้บริการค่ะ
-	Click Button    พิมพ์ใบเสร็จ
+#	Click Button    พิมพ์ใบเสร็จ
 	Close All Browsers
 
 *** Keywork ***
