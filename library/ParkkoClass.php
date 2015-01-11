@@ -27,7 +27,7 @@ class ParkkoClass {
 	    $thai_date_return.= "ที่ ".$this->convertToThaiNumber(date("j",$time));  
 	    $thai_date_return.= " ".$thai_month_arr[date("n",$time)];  
 	    $thai_date_return.= " พ.ศ.".$this->convertToThaiNumber((date("Y",$time)+543));  
-	    $thai_date_return.= "  ".$this->convertToThaiNumber(date("H:i",$time))." น.";  
+	    $thai_date_return.= " เวลา ".$this->convertToThaiNumber(date("H:i",$time))." น.";  
 	    return $thai_date_return;  
 	}  
 	
