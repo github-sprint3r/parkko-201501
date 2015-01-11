@@ -15,6 +15,7 @@
 
 #border .border {
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 
@@ -33,4 +34,8 @@
 	
 #border .border-row .value {
 	font-size: 14px;
+}
+
+#printButton {
+	text-align: center;
 }

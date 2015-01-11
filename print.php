@@ -1,6 +1,28 @@
 <?php 
 include_once('library/ParkkoClass.php');
 $parkko = new ParkkoClass();
+
+if(isset($_GET['id'])) {
+	$data = array(
+			'id' =>'สฬ 5420',
+			'province' =>'กรุงเทพมหานคร',
+			'in' =>'2015-01-10 08:30',
+			'out' =>'2015-01-11 16:32',
+			'cost' =>50,
+			'money_in' =>1000,
+			'money_out' =>950
+			);
+} else {
+	$data = array(
+			'id' =>'ณข 1597',
+			'province' =>'กรุงเทพมหานคร',
+			'in' =>'2015-01-10 08:00',
+			'out' =>'2015-01-10 17:00',
+			'cost' =>50,
+			'money_in' =>500,
+			'money_out' =>950,
+	);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,16 +53,22 @@ $parkko = new ParkkoClass();
 		<strong>ใบเสร็จแบบย่อ</strong>
 	</div>
 	<div class="border">
-		<span class="border-row"><strong>หมายเลขทะเบียน: </strong><?php echo $parkko->convertToThaiNumber('สฬ 5420')?></span>
-		<span class="border-row"><strong>จังหวัด: </strong><span class="value">กรุงเทพมหานครฯ</span></span>
-		<span class="border-row"><strong>เวลาเข้า: </strong><br/><span class="value"><?php echo $parkko->thai_date(strtotime('2015-01-10 08:30'))?></span></span>
-		<span class="border-row"><strong>เวลาออก: </strong><br/><span class="value"><?php echo $parkko->thai_date(strtotime('2015-01-11 16:32'))?></span></span>
-		<span class="border-row"><strong>ระยะเวลา: </strong><span class="value"><?php echo $parkko->timeDuration('2015-01-10 08:30', '2015-01-11 16:32')?></span></span>
-		<span class="border-row"><strong>ค่าบริการ: </strong><span class="value"><?php echo $parkko->convertToThaiNumber(number_format('1000', 2))?> บาท</span></span>
+		<span class="border-row"><strong>หมายเลขทะเบียน: </strong><?php echo $parkko->convertToThaiNumber($data['id'])?></span>
+		<span class="border-row"><strong>จังหวัด: </strong><span class="value"><?php echo $data['province']?></span></span>
+		<span class="border-row"><strong>เวลาเข้า: </strong><br/><span class="value"><?php echo $parkko->thai_date(strtotime($data['in']))?></span></span>
+		<span class="border-row"><strong>เวลาออก: </strong><br/><span class="value"><?php echo $parkko->thai_date(strtotime($data['out']))?></span></span>
+		<span class="border-row"><strong>ระยะเวลา: </strong><span class="value"><?php echo $parkko->timeDuration($data['in'], $data['out'])?></span></span>
+		<span class="border-row"><strong>ค่าบริการ: </strong><span class="value"><?php echo $parkko->convertToThaiNumber(number_format($data['cost'], 2))?> บาท</span></span>
+		<span class="border-row"><strong>รับเงิน: </strong><span class="value"><?php echo $parkko->convertToThaiNumber(number_format($data['money_in'], 2))?> บาท</span></span>
+		<span class="border-row"><strong>ทอนเงิน: </strong><span class="value"><?php echo $parkko->convertToThaiNumber(number_format($data['money_out'], 2))?> บาท</span></span>
 	</div>
 	<div class="footer">
 		<strong>ขอบคุณที่ใช้บริการค่ะ</strong>
 	</div>
+</div>
+
+<div id="printButton">
+	<input type="button" value = "Print this page" onclick="printPage()">
 </div>
 	
 <script type='text/javascript'
@@ -48,9 +76,18 @@ $parkko = new ParkkoClass();
 <script type='text/javascript'
 	src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/assets/font/boon/js/fittext.js"></script>
-<script type="text/javascript">
-    fitText(document.getElementById('title'), 0.5);
-  </script>
-
+<script>
+function printPage() {
+	if(document.all) {
+		document.all.divButtons.style.visibility = 'hidden';
+		window.print();
+		document.all.divButtons.style.visibility = 'visible';
+	} else {
+		document.getElementById('printButton').style.visibility = 'hidden';
+		window.print();
+		document.getElementById('printButton').style.visibility = 'visible';
+	}
+}
+</script>
 </body>
 </html>
