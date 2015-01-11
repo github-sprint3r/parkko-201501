@@ -3,3 +3,9 @@ test/
 *.xml
 *.png
 
+vendor/
+composer.lock
+
+.settings/
+.buildpath
+.project

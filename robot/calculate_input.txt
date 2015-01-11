@@ -2,7 +2,7 @@
 Library    Selenium2Library
 
 *** Variables ***
-${cashier_page}    file:///Users/Ponear/Git/parkko/templates/calculate_input.html
+${cashier_page}    http://27.254.142.62/templates/calculate_input.html
 
 *** Testcases ***
 Calculate Input
