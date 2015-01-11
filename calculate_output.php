@@ -1,4 +1,4 @@
-<?
+<?php
 require "library/ConnectMysql.php";
 
 $license = $_POST["license_field"];
@@ -12,6 +12,14 @@ while ($row = mysql_fetch_assoc($result)) {
     $plate['last_name'] = $row['last_name'];
     $plate['plate'] = $row['plate'];
     $plate['country'] = $row['country'];
+
+    if($row['plate'] == 'สฬ5420') {
+        $plate['priceThai'] = "๑๓๐";
+        $plate['price'] = "130";
+    } else {
+        $plate['priceThai'] = "๑๕๓๐";
+        $plate['price'] = "1530";
+    }
 }
 
 ?>
@@ -31,6 +39,16 @@ while ($row = mysql_fetch_assoc($result)) {
 <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+
+<style>
+#changeMoneyTable {
+    width: 30%;
+}
+#changeMoneyTable td {
+    border: 1px solid black;
+}
+</style>
+
 <body>
     <div class="container">
         <div class="row">
@@ -40,19 +58,19 @@ while ($row = mysql_fetch_assoc($result)) {
                         <tbody>
                             <tr>
                                 <td>ชื่อ: </td>
-                                <td><?=$plate['first_name']?></td>
+                                <td><?php echo $plate['first_name']?></td>
                             </tr>
                             <tr>
                                 <td>นามสกุล: </td>
-                                <td><?=$plate['last_name']?></td>
+                                <td><?php echo $plate['last_name']?></td>
                             </tr>
                             <tr>
                                 <td>ทะเบียนรถ: </td>
-                                <td><?=$plate['plate']?></td>
+                                <td><?php echo $plate['plate']?></td>
                             </tr>
                             <tr>
                                 <td>จังหวัด: </td>
-                                <td><?=$plate['country']?></td>
+                                <td><?php echo $plate['country']?></td>
                             </tr>
                             <tr>
                                 <td>วันเวลาที่เข้า: </td>
@@ -64,7 +82,7 @@ while ($row = mysql_fetch_assoc($result)) {
                             </tr>
                             <tr>
                                 <td>ราคาที่ต้องชำระ: </td>
-                                <td>๑๕๕๐ บาท</td>
+                                <td>​<?php echo $plate['priceThai']?> บาท</td>
                             </tr>
                             <tr>
                                 <td>จำนวนเงินที่ชำระ: </td>
@@ -74,6 +92,8 @@ while ($row = mysql_fetch_assoc($result)) {
                     </table>
                     <input type="button" id="calculate_button" value="คำนวนเงินทอน"><br>
                 </form>
+            </div>
+            <div id="splitMoney">
             </div>
         </div>
     </div>
@@ -85,7 +105,17 @@ while ($row = mysql_fetch_assoc($result)) {
 <script type="text/javascript" src="/assets/font/boon/js/fittext.js"></script>
 <script type="text/javascript">
     $(document).on('click', '#calculate_button', function(){
-        alert('test');
- });
+        $.ajax({
+            url: 'calculateMoneyAjax.php',
+            type: 'POST',
+            data: {
+                parking_price: <?php echo $plate['price']; ?>,
+                receive: $("[name='receive']").val()
+            },
+            success: function(response) {
+                $("#splitMoney").html(response);
+            }
+        });
+    });
 </script>
 </html>
