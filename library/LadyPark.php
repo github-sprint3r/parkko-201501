@@ -1,4 +1,4 @@
-<?
+<?php
 	class LadyPark {
 		function getColorFromFile() {
 			$colorCode = "#A1F779";

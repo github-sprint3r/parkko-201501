@@ -3,7 +3,7 @@
         "phpunit/phpunit": "4.1.*"
     },
     "autoload": {
-        "classmap": ["admin/", "library/"]
+        "classmap": ["library/"]
     }
 
 }
