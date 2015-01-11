@@ -1,0 +1,24 @@
+*** Settings ***
+Library    Selenium2Library
+
+*** Variables ***
+${cashier_page}    http://27.254.142.62/templates/calculate_output.html
+
+*** Testcases ***
+Calculate Input
+    Open Cashier Page
+    Title Should Be    Parkko | Cashier
+    Page Should Contain    ชื่อ: 
+    Page Should Contain    นามสกุล: 
+    Page Should Contain    ทะเบียนรถ: 
+    Page Should Contain    จังหวัด: 
+    Page Should Contain    วันเวลาที่เข้า: 
+    Page Should Contain    วันเวลาที่ออก: 
+    Page Should Contain    ราคาที่ต้องชำระ: 
+    Page Should Contain    จำนวนเงินที่ชำระ: 
+    Close All Browsers
+
+*** Keyword ***
+Open Cashier Page
+    Open Browser    ${cashier_page}
+
