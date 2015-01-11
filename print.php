@@ -68,7 +68,7 @@ if(isset($_GET['id'])) {
 </div>
 <br/>
 <div id="printButton">
-	<input type="button" value = "Print this page" onclick="printPage()" class="btn btn-primary">
+	<input type="button" value="พิมพ์ใบเสร็จ" onclick="printPage()" class="btn btn-primary">
 </div>
 	
 <script type='text/javascript'
